@@ -115,4 +115,14 @@
         height: 25vh;
         object-fit: cover;
     }
+
+    .beneficios h2 {
+        font-size: 2.6rem;
+        margin-top: 5vh;
+    }
+
+    .beneficio img {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
 }
