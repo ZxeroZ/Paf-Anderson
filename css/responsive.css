@@ -110,4 +110,9 @@
         border-radius: 8px;
         margin-bottom: 10px;
     }
+
+    #ferreteria img {
+        height: 25vh;
+        object-fit: cover;
+    }
 }
