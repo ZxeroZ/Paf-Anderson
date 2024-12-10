@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Distribuidora Ferretera Ferrocorp</title>
+
+
+    <!-- Enlace a estilos -->
+    <link rel="stylesheet" href="css/beneficios.css">
+    <link rel="stylesheet" href="css/cards_productos.css">
+    <link rel="stylesheet" href="css/carrusel.css">
+    <link rel="stylesheet" href="css/categorias.css">
+    <link rel="stylesheet" href="css/chat_bot.css">
+    <link rel="stylesheet" href="css/efectos.css">
+    <link rel="stylesheet" href="css/estilos_globales.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/ofertas.css">
+    <link rel="stylesheet" href="css/otras_categorias.css">
+    <link rel="stylesheet" href="css/responsividad.css">
+
+    <link rel="stylesheet" href="css/promociones.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/anuncio.css">
+
+    <link rel="stylesheet" href="./css/responsive.css">
+
+
+    <!-- Fuentes e iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Contenido de tu página aquí -->
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot">
+        <div class="chat-header">
+            <h3>Bienvenido a YairsitoBot🤖</h3>
+            <button id="closeChat" class="close-button">❌</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Escribe tu mensaje..." />
+            <button id="sendButton">Enviar</button>
+        </div>
+    </div>
+    <button id="chatToggle" class="chat-toggle">💬</button>
+    </div>
+
+    <div class="announcement-bar">
+        <p><strong>Horario de Atención:</strong> Lunes a Sábados de 8:00 am a 8:00 pm | Domingo de 8:00 am a 12:00 pm
+        </p>
+    </div>
+    <!-- Header con menú de navegación -->
+
+
+
+
+
+    <div class="top-bar">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="top-bar-ctn">
+            <div class="branding">
+                <a href="index.html" class="logo-text">
+                    <h1>Ferrocorp</h1>
+                </a>
+            </div>
+
+            <div class="user-options">
+                <a href="iniciar.html">
+                    <i class="fas fa-sign-in-alt"></i> Inicia Sesión
+                </a>
+                <a href="javascript:void(0);" aria-label="Ver Mis Compras" class="cart">
+                    <i class="fas fa-shopping-cart"></i> Mis Compras <span id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul class="nav-link">
+            <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="productos.html"><i class="fas fa-box-open"></i> Productos</a></li>
+            <li><a href="servicios.html"><i class="fas fa-concierge-bell"></i> Servicios</a></li>
+            <li><a href="contacto.html"><i class="fas fa-address-book"></i> Contacto</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector("nav");
+            nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+
+
+
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-header">
+            <h3>Mi Carrito</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="cart-body">
+            <p id="emptyCartMessage">Tu carrito está vacío.</p>
+            <div id="cartItems" class="cart-items">
+                <!-- Aquí se mostrarán los productos -->
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                Subtotal: <span id="cartTotal">S/ 0.00</span>
+            </div>
+            <button class="btn order">Confirmar Pedido</button>
+        </div>
+    </div>
+
+
+    <!-- Carrusel de anuncios -->
+    <section id="promociones" class="slider">
+        <div class="slide">
+            <h2>Reventón de la CASA</h2>
+            <p>Muebles de sala, nueva colección</p>
+            <button onclick="window.location.href='productos.html?categoria=muebles'">Ver Más</button>
+        </div>
+        <div class="slide">
+            <h2>Herramientas con Descuento</h2>
+            <p>Aprovecha el 20% en herramientas seleccionadas</p>
+            <button onclick="window.location.href='productos.html?categoria=herramientas'">Comprar Ahora</button>
+        </div>
+        <div class="slide">
+            <h2>Promoción de Pinturas</h2>
+            <p>30% de descuento en pinturas seleccionadas</p>
+            <button onclick="window.location.href='productos.html?categoria=pinturas'">Ver Promoción</button>
+        </div>
+        <div class="slide">
+            <h2>Ofertas en Electrodomésticos</h2>
+            <p>Hasta 40% en electrodomésticos</p>
+            <button onclick="window.location.href='productos.html?categoria=electrodomesticos'">Comprar Ahora</button>
+        </div>
+    </section>
+
+    <!-- Categorías en forma de íconos -->
+
+
+    </section>
+    <!--
+     <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    -->
+
+    <!-- Sección de Promociones Cyber -->
+    <section id="promociones-cyber" class="promociones-cyber">
+        <!-- Contenedor principal para el banner y los productos -->
+        <div class="promociones-container">
+            <!-- Contenedor de productos -->
+            <div class="ofertas-container">
+                <!-- Tarjeta de producto 1 -->
+                <div class="tarjeta-oferta">
+                    <span class="descuento">-18% <span class="extra-descuento">-20%</span></span>
+                    <a href="detalle-producto.html?id=1">
+                        <img src="imagenes/cemento.png" alt="Producto 1">
+                    </a>
+                    <h4>Cemento Pacasmayo Fortimax F3 Ms 42.5 kg</h4>
+                    <p class="precio-antes">s/40.00</p>
+                    <p class="precio-ahora">s/32.90</p>
+                    <p class="precio-oferta">s/31.20 <span>oh!</span></p>
+                </div>
+
+                <!-- Tarjeta de producto 2 -->
+                <div class="tarjeta-oferta">
+                    <span class="descuento">-14%</span>
+                    <a href="detalle-producto.html?id=2">
+                        <img src="imagenes/pintura.png" alt="Producto 2">
+                    </a>
+                    <h4>Látex Pato CPP Blanco GAL</h4>
+                    <p class="precio-antes">s/40.20</p>
+                    <p class="precio-ahora">s/36.20</p>
+                </div>
+
+                <!-- Tarjeta de producto 3 -->
+                <div class="tarjeta-oferta">
+                    <span class="descuento">-20% <span class="extra-descuento">-15%</span></span>
+                    <a href="detalle-producto.html?id=3">
+                        <img src="imagenes/cemento_rojo.png" alt="Producto 3">
+                    </a>
+                    <h4>Cemento Pacasmayo Rojo F3 Ms 42.5 kg</h4>
+                    <p class="precio-antes">s/43.10</p>
+                    <p class="precio-ahora">s/39.20</p>
+                    <p class="precio-oferta">s/35.20 <span>oh!</span></p>
+                </div>
+
+                <!-- Tarjeta de producto 4 -->
+                <div class="tarjeta-oferta">
+                    <span class="descuento">-45%</span>
+                    <a href="detalle-producto.html?id=4">
+                        <img src="imagenes/calamina.png" alt="Producto 4">
+                    </a>
+                    <h4>Calamina Galv 0.8x3.6mx0.2mm AASA </h4>
+                    <p class="precio-antes">s/23.90</p>
+                    <p class="precio-ahora">s/21.40</p>
+                </div>
+            </div>
+
+            <!-- Banner Cyber -->
+            <div class="banner-cyber">
+                <h2>¡Las mejores promos del Cyber Ferrocorp!</h2>
+                <div class="cuenta-regresiva">
+                    <span id="horas">14</span>:<span id="minutos">56</span>:<span id="segundos">42</span>
+                </div>
+                <a href="productos.html" class="btn-ver-mas">Ver más ofertas</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Imagen completa del ancho de la pantalla -->
+    <section id="ferreteria">
+        <img src="imagenes/banner.png" alt="Imagen de Ferretería" class="imagen-full">
+    </section>
+
+    <!-- Sección de beneficios -->
+    <section id="beneficios" class="beneficios">
+        <h2>Beneficios</h2>
+        <div class="beneficios-container">
+            <div class="beneficio">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Compra Online<br>Recoge en Ferretería en 1 hora</p>
+            </div>
+            <div class="beneficio">
+                <i class="fas fa-shipping-fast"></i>
+                <p>Recibe en 24 horas<br>Distrito de Reque</p>
+            </div>
+            <div class="beneficio">
+                <i class="fas fa-credit-card"></i>
+                <p>0% Interés<br>Paga en cuotas sin intereses</p>
+            </div>
+            <div class="beneficio">
+                <i class="fas fa-shield-alt"></i>
+                <p>1 año de garantía<br>En todos los productos</p>
+            </div>
+            <div class="beneficio">
+                <i class="fas fa-tools"></i>
+                <p>Soporte Técnico<br>Certificado y Especializado</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="productos">
+        <h2 class="titulo-productos">¡Explora nuestros productos exclusivos!</h2>
+        <div id="productos-container" class="productos-container">
+            <!-- Los productos se agregarán dinámicamente aquí -->
+        </div>
+        <!-- Botones de navegación -->
+        <div id="pagination" class="pagination">
+            <!-- Botones de paginación se generarán dinámicamente -->
+        </div>
+    </section>
+
+
+
+    <!-- Banner Promocional Inferior -->
+    <div class="banner-promocional">
+        <h3>¡Aprovecha un 10% adicional con tu primera compra!</h3>
+        <p>Usa el código <strong>FERRO10</strong> al finalizar tu compra y ahorra aún más.</p>
+        <button class="btn-banner" onclick="window.location.href='productos.html?oferta=FERRO10'">Ver Más
+            Ofertas</button>
+    </div>
+
+
+
+
+    </section>
+    <!-- Sección Sobre Nosotros y Ubicación -->
+    <section id="sobre-nosotros-ubicacion" class="sobre-nosotros-ubicacion">
+        <div class="contenido">
+            <!-- Información sobre la empresa -->
+            <div class="sobre-nosotros">
+                <h2>Sobre Nosotros</h2>
+                <p>Distribuidora Ferretera Ferrocorp es tu socio de confianza en materiales de construcción,
+                    herramientas y artículos ferreteros. Nos especializamos en ofrecer productos de alta calidad a
+                    precios competitivos para el sector de la construcción y el hogar.</p>
+                <p>Nuestro compromiso es brindar un servicio excepcional, asegurando la satisfacción de nuestros
+                    clientes. Ubicados en el corazón de Reque, Perú, contamos con una tienda física donde podrás
+                    encontrar un amplio stock de productos. ¡Visítanos y descubre nuestras promociones exclusivas!</p>
+            </div>
+
+            <!-- Mapa de ubicación -->
+            <div class="mapa">
+                <h2>Visítanos en Nuestra Tienda</h2>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.221850425941!2d-79.81962817596538!3d-6.863995967154251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ce7d5b14c7f29%3A0xca37f5bd126b2743!2sDistribuidora%20Ferretera%20FERROCORP!5e0!3m2!1ses!2spe!4v1731764990384!5m2!1ses!2spe"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-social">
+                <h4>Síguenos en:</h4>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-payments">
+                <h4>Métodos de Pago:</h4>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-diners-club"></i>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>Distribuidora Ferretera Ferrocorp - Todos los derechos reservados © 2024</p>
+        </div>
+    </footer>
+
+    <!-- Importar script -->
+
+
+    <script src="js/carrusel.js"></script>
+    <script src="js/chat_bot.js"></script>
+    <script src="js/cuenta_regresiva.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/busqueda.js"></script>
+
+
+
+</body>
+
+</html>

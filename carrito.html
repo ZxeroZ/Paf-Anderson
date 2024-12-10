@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Ferrocorp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header con búsqueda y categorías -->
+    <div class="top-bar">
+        <div class="branding">
+            <h1 class="logo-text">Ferrocorp</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar en Ferrocorp" aria-label="Buscar productos">
+            <button type="button" aria-label="Buscar productos"><i class="fas fa-search"></i> Buscar</button>
+        </div>
+        
+        <div class="user-options">
+            <a href="iniciar.html" aria-label="Iniciar Sesión"><i class="fas fa-sign-in-alt"></i> Inicia Sesión</a>
+            <a href="carrito.html" aria-label="Ver Carrito" class="cart"><i class="fas fa-shopping-cart"></i> Mis Compras <span id="cartCount">0</span></a>
+        </div>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html" aria-label="Ir al Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="productos.html" aria-label="Ver Productos"><i class="fas fa-box-open"></i> Productos</a></li>
+            <li><a href="#" aria-label="Ver Servicios"><i class="fas fa-concierge-bell"></i> Servicios</a></li>
+            <li><a href="#" aria-label="Contacto"><i class="fas fa-address-book"></i> Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor para los productos del carrito -->
+<section id="carrito" class="carrito-container">
+    <h2>Carrito de Compras</h2>
+    <div id="cartItems" class="cart-items">
+        <!-- Los productos se insertarán aquí dinámicamente -->
+    </div>
+
+    <div class="cart-summary">
+        <h3>Total: <span id="totalPrice">S/. 0.00</span></h3>
+        <button id="checkoutBtn" class="checkout-btn">Finalizar Compra</button>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-social">
+                <h4>Síguenos en:</h4>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-payments">
+                <h4>Métodos de Pago:</h4>
+                <i class="fab fa-cc-visa" aria-label="Visa"></i>
+                <i class="fab fa-cc-mastercard" aria-label="Mastercard"></i>
+                <i class="fab fa-cc-amex" aria-label="American Express"></i>
+                <i class="fab fa-cc-diners-club" aria-label="Diners Club"></i>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>Distribuidora Ferretera Ferrocorp - Todos los derechos reservados © 2024</p>
+        </div>
+    </footer>
+
+ <script>
+    // Variables para el carrito
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartItemsContainer = document.getElementById('cartItems');
+const totalPriceElement = document.getElementById('totalPrice');
+const cartCount = document.getElementById('cartCount');
+
+// Función para renderizar el carrito
+function renderCart() {
+    cartItemsContainer.innerHTML = ''; // Limpiamos el contenedor
+    let totalPrice = 0;
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>No hay productos en el carrito.</p>';
+    } else {
+        cart.forEach((product, index) => {
+            totalPrice += product.price * product.quantity;
+
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <div class="cart-item-details">
+                    <span class="cart-item-name">${product.name}</span>
+                    <span class="cart-item-price">S/. ${product.price.toFixed(2)}</span>
+                </div>
+                <div class="cart-item-quantity">
+                    <button class="decrease-btn">-</button>
+                    <input type="number" value="${product.quantity}" min="1">
+                    <button class="increase-btn">+</button>
+                </div>
+                <span class="cart-item-remove">🗑️</span>
+            `;
+
+            // Añadir funcionalidad a los botones de aumentar y disminuir cantidad
+            cartItem.querySelector('.decrease-btn').addEventListener('click', () => updateQuantity(index, -1));
+            cartItem.querySelector('.increase-btn').addEventListener('click', () => updateQuantity(index, 1));
+            cartItem.querySelector('.cart-item-remove').addEventListener('click', () => removeItem(index));
+
+            cartItemsContainer.appendChild(cartItem);
+        });
+    }
+
+    // Actualizamos el total y la cantidad del carrito
+    totalPriceElement.textContent = `S/. ${totalPrice.toFixed(2)}`;
+    cartCount.textContent = cart.reduce((acc, item) => acc + item.quantity, 0);
+    localStorage.setItem('cart', JSON.stringify(cart)); // Actualizamos el carrito en localStorage
+}
+
+// Función para actualizar la cantidad de productos
+function updateQuantity(index, change) {
+    if (cart[index].quantity + change > 0) {
+        cart[index].quantity += change;
+        renderCart(); // Volvemos a renderizar el carrito con los cambios
+    }
+}
+
+// Función para eliminar un producto
+function removeItem(index) {
+    cart.splice(index, 1); // Removemos el producto del array
+    renderCart(); // Volvemos a renderizar el carrito
+}
+
+// Renderizar el carrito al cargar la página
+renderCart();
+
+ </script>
+
+</body>
+</html>

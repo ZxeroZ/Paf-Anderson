@@ -1,0 +1,44 @@
+/* Sección de Beneficios */
+.beneficios {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.beneficios h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.beneficios-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.beneficio {
+    background-color: white;
+    border-radius: 15px;
+    /* Hacemos las esquinas más redondeadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    /* Aumentamos el padding */
+    text-align: center;
+    width: 220px;
+    /* Mantenemos el ancho de la tarjeta */
+    transition: transform 0.3s ease;
+}
+
+.beneficio i {
+    font-size: 30px;
+}
+
+.beneficio p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.6;
+}
