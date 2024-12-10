@@ -185,4 +185,31 @@
         font-family: 'Poppins', sans-serif;
     }
 
+
+    .footer-sup {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-item {
+        flex: none;
+    }
+
+    .footer-item-1 {
+        flex: none;
+    }
+
+    .redes {
+        width: 60%;
+        gap: 10px;
+    }
+
+    .footer-ctn {
+        width: 95%;
+    }
+
+    .-f-res {
+        display: none;
+    }
 }

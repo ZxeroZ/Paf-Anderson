@@ -70,9 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Centrar los botones de cantidad */
     margin-left: 20px;
-    /* Separar los controles de cantidad de la información */
 }
 
 .quantity-controls button {
@@ -83,6 +81,9 @@
     width: 30px;
     height: 30px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     margin: 0 5px;
     transition: background-color 0.2s ease-in-out;
