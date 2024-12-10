@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Ferrocorp</title>
+     <!-- Enlace a estilos -->
+
+    <link rel="stylesheet" href="css/beneficios.css">
+    <link rel="stylesheet" href="css/carrusel.css">
+    <link rel="stylesheet" href="css/categorias.css">
+    <link rel="stylesheet" href="css/chat_bot.css">
+    <link rel="stylesheet" href="css/efectos.css">
+    <link rel="stylesheet" href="css/ofertas.css">
+    <link rel="stylesheet" href="css/promociones.css">
+    <link rel="stylesheet" href="css/efectos.css">
+    <link rel="stylesheet" href="css/estilos_globales.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/otras_categorias.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/anuncio.css">
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="announcement-bar">
+        <p><strong>Horario de Atención:</strong> Lunes a Sábados de 8:00 am a 8:00 pm | Domingo de 8:00 am a 12:00 pm</p>
+        </div>
+   <!-- Header con menú de navegación -->
+   <div class="top-bar">
+    <div class="branding">
+        <!-- Enlace al inicio -->
+        <a href="index.html" class="logo-text">
+            <h1>Ferrocorp</h1>
+        </a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar en Ferrocorp">
+        <button type="button"><i class="fas fa-search"></i> Buscar</button>
+    </div>
+    <div class="user-options">
+        <a href="iniciar.html"><i class="fas fa-sign-in-alt"></i> Inicia Sesión</a>
+        <a href="javascript:void(0);" aria-label="Ver Mis Compras" class="cart">
+            <i class="fas fa-shopping-cart"></i> Mis Compras <span id="cartCount">0</span>
+    </div>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="productos.html"><i class="fas fa-box-open"></i> Productos</a></li>
+        <li><a href="servicios.html"><i class="fas fa-concierge-bell"></i> Servicios</a></li>
+        <li><a href="contacto.html"><i class="fas fa-address-book"></i> Contacto</a></li>
+    </ul>
+</nav>
+
+
+<div id="cartModal" class="cart-modal">
+    <div class="cart-header">
+        <h3>Mi Carrito</h3>
+        <button class="close-modal">&times;</button>
+    </div>
+    <div class="cart-body">
+        <p id="emptyCartMessage">Tu carrito está vacío.</p>
+        <div id="cartItems" class="cart-items">
+            <!-- Aquí se mostrarán los productos -->
+        </div>
+    </div>
+    <div class="cart-footer">
+        <div class="subtotal">
+            Subtotal: <span id="cartTotal">S/ 0.00</span>
+        </div>
+        <button class="btn order">Confirmar Pedido</button>
+    </div>
+</div>
+
+
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contacto-container">
+        <div class="contacto-info">
+            <div class="logo-card">
+                <img src="imagenes/logo.png" alt="Logo Ferrocorp" class="logo-redondo">
+                <h2>Distribuidora Ferretera Ferrocorp</h2>
+                <p>Estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros.</p>
+            </div>
+        </div>
+        <div class="form-container">
+            <h2>Formulario de Contacto</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+<!-- Beneficios -->
+<div class="beneficios-container">
+    <div class="beneficio">
+        <i class="fas fa-lock"></i>
+        <p><strong>Compra fácil</strong> y 100% segura en Ferrocorp</p>
+    </div>
+    <div class="beneficio">
+        <i class="fas fa-shield-alt"></i>
+        <p><strong>Garantía de 1 año</strong> en todos nuestros productos</p>
+    </div>
+    <div class="beneficio">
+        <i class="fas fa-store"></i>
+        <p>Retiro <strong>gratis</strong> en tiendas de Reque</p>
+    </div>
+    <div class="beneficio">
+        <i class="fas fa-truck"></i>
+        <p>Despacho a domicilio con <strong>seguimiento de tu pedido</strong></p>
+    </div>
+</div>
+
+<!-- Suscripción en una sola línea -->
+<div class="suscripcion-container">
+    <div class="suscripcion-logo">
+        Ferrocorp
+    </div>
+    <div class="suscripcion-texto">
+        <div class="texto">
+            <h4>Suscríbete y recibe consejos y promociones</h4>
+            <p>Recibe noticias y promociones comerciales directamente en tu correo.</p>
+        </div>
+        <form action="">
+            <input type="email" placeholder="Ingresa tu correo">
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="politicas">
+            <input type="checkbox" id="acepto-politicas">
+            <label for="acepto-politicas">Acepto las políticas de datos personales</label>
+        </div>
+    </div>
+</div>
+ 
+<!-- Modal de Confirmación de Envío -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" id="closeModal"><i class="fas fa-times"></i></button>
+        
+        <!-- Ícono de éxito -->
+        <div class="modal-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+
+        <!-- Título y mensaje -->
+        <h3>¡Mensaje Enviado!</h3>
+        <p>Gracias por ponerte en contacto con nosotros. Tu mensaje ha sido enviado correctamente.</p>
+        <p>Nos pondremos en contacto contigo a la brevedad.</p>
+
+        <!-- Botón de continuar -->
+        <button id="continue" class="btn continue-btn">Volver al Inicio</button>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-social">
+                <h4>Síguenos en:</h4>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-payments">
+                <h4>Métodos de Pago:</h4>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-diners-club"></i>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>Distribuidora Ferretera Ferrocorp - Todos los derechos reservados © 2024</p>
+        </div>
+    </footer>
+
+  
+    <script src="js/productos.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    const modal = document.getElementById('contactModal');
+    const closeModal = document.getElementById('closeModal');
+    const continueButton = document.getElementById('continue');
+
+    // Al enviar el formulario
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevenir el comportamiento por defecto del formulario (no recargue la página)
+
+        // Mostrar el modal de confirmación
+        modal.style.display = 'flex';
+    });
+
+    // Cerrar el modal cuando el usuario haga clic en la X
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Cuando el usuario presione "Volver al Inicio", redirigir a la página principal
+    continueButton.addEventListener('click', () => {
+        window.location.href = 'index.html';  // Redirige al inicio
+    });
+});
+
+
+    </script>
+</body>
+</html>

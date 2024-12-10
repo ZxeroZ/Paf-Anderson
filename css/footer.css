@@ -1,0 +1,61 @@
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Redes sociales */
+.footer-social h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-social a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #ffcd3c; /* Amarillo de Ferrocorp */
+}
+
+/* Métodos de pago */
+.footer-payments h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-payments img {
+    width: 60px;
+    margin: 0 10px;
+}
+
+.footer-social a:hover, .footer-payments img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+/* Texto de derechos reservados */
+.footer-copy {
+    padding-top: 20px;
+}
+
+.footer-copy p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}

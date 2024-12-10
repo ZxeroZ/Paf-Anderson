@@ -1,0 +1,63 @@
+/* Estilos globales */
+/* Incluye la fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Top Bar y Branding */
+.top-bar {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #2c3e50;
+}
+
+.top-bar-ctn {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 100px;
+}
+
+
+.user-options {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.user-options a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.user-options a i {
+    font-size: 18px;
+}

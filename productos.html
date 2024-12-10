@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ferrocorp</title>
+    
+ <!-- Archivos de estilos -->
+
+    <link rel="stylesheet" href="css/efectos.css">
+    <link rel="stylesheet" href="css/estilos_globales.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/otras_categorias.css">
+    <link rel="stylesheet" href="css/responsividad.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/anuncio.css">
+
+
+   
+  
+    
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        <p><strong>Horario de Atención:</strong> Lunes a Sábados de 8:00 am a 8:00 pm | Domingo de 8:00 am a 12:00 pm</p>
+        </div>
+
+       <!-- Header con menú de navegación -->
+       <div class="top-bar">
+        <div class="branding">
+            <a href="index.html" class="logo-text">
+                <h1>Ferrocorp</h1>
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar productos...">
+            <button type="button" id="search-button"><i class="fas fa-search"></i> Buscar</button>
+        </div>
+        <div class="user-options">
+            <a href="iniciar.html"><i class="fas fa-sign-in-alt"></i> Inicia Sesión</a>
+            <a href="javascript:void(0);" aria-label="Ver Mis Compras" class="cart">
+                <i class="fas fa-shopping-cart"></i> Mis Compras <span id="cartCount">0</span>
+            </a>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="productos.html"><i class="fas fa-box-open"></i> Productos</a></li>
+            <li><a href="servicios.html"><i class="fas fa-concierge-bell"></i> Servicios</a></li>
+            <li><a href="contacto.html"><i class="fas fa-address-book"></i> Contacto</a></li>
+        </ul>
+    </nav>
+
+ 
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-header">
+            <h3>Mi Carrito</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="cart-body">
+            <p id="emptyCartMessage">Tu carrito está vacío.</p>
+            <div id="cartItems" class="cart-items">
+                <!-- Aquí se mostrarán los productos -->
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                Subtotal: <span id="cartTotal">S/ 0.00</span>
+            </div>
+            <button class="btn order">Confirmar Pedido</button>
+        </div>
+    </div>
+    
+    
+    
+
+
+    <!-- Sección de Categorías de Productos -->
+    <section id="categorias">
+        <h2>Construcción</h2>
+        <p>Antes de construir o realizar algún cambio dentro de tu hogar, asegúrate en tener todo bajo control. Descubre los mejores materiales para tener tu lugar soñado. Bienvenido a Construcción.</p>
+
+        <!-- Contenedor de Categorías -->
+        <div class="categoria-container">
+            <div class="categoria">
+                <img src="https://promart.vteximg.com.br/arquivos/ids/248448-177-177/106972.jpg?v=636661377420930000" alt="Techos">
+                <p>Techos planos y ondulados</p>
+            </div>
+            <div class="categoria">
+                <img src="https://promart.vteximg.com.br/arquivos/ids/7133537-177-177/83717.jpg?v=638228745324470000" alt="Fierros">
+                <p>Fierros</p>
+            </div>
+            <div class="categoria">
+                <img src=https://promart.vteximg.com.br/arquivos/ids/218408-177-177/94610.jpg?v=636090203356300000" alt="Cemento">
+                <p>Cemento</p>
+            </div>
+            <div class="categoria">
+                <img src="https://promart.vteximg.com.br/arquivos/ids/229072-177-177/109041.jpg?v=636341726505000000 alt="Sistema Drywall">
+                <p>Sistema Drywall</p>
+            </div>
+            <div class="categoria">
+                <img src="https://promart.vteximg.com.br/arquivos/ids/320604-177-177/17702.jpg?v=636977043608770000" alt="Ladrillos">
+                <p>Ladrillos y Bloques</p>
+            </div>
+            <div class="categoria">
+                <img src="https://promart.vteximg.com.br/arquivos/ids/225772-177-177/106624.jpg?v=636247544661930000" alt="Tableros">
+                <p>Tableros estructurales</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="productos" class="productos">
+        <h2 class="titulo-productos">¡Explora nuestros productos exclusivos!</h2>
+        <div id="productos-container" class="productos-container">
+            <!-- Los productos se agregarán dinámicamente aquí -->
+        </div>
+        <!-- Botones de navegación -->
+        <div id="pagination" class="pagination">
+            <!-- Botones de paginación se generarán dinámicamente -->
+        </div>
+    </section>
+    
+ 
+    
+
+
+
+ <!-- Sección de Testimonios -->
+<section id="testimonios" class="testimonios">
+    <h2 class="titulo-testimonios">Lo que dicen nuestros clientes</h2>
+    <div class="testimonios-container">
+        <!-- Testimonio 1 -->
+        <div class="testimonial">
+            <img src="imagenes/cliente1.png" alt="Cliente 1" class="foto-cliente">
+            <p>"Excelente calidad de productos y un servicio al cliente impecable. ¡Ferrocorp siempre cumple!"</p>
+            <h4>Anderson Giron</h4>
+        </div>
+        <!-- Testimonio 2 -->
+        <div class="testimonial">
+            <img src="imagenes/cliente2.png" alt="Cliente 2" class="foto-cliente">
+            <p>"Nunca había encontrado una distribuidora tan eficiente y con precios competitivos. ¡Muy recomendados!"</p>
+            <h4>Lucrecia Victoria</h4>
+        </div>
+        <!-- Testimonio 3 -->
+        <div class="testimonial">
+            <img src="imagenes/cliente3.png" alt="Cliente 3" class="foto-cliente">
+            <p>"Gracias a Ferrocorp, completé mi proyecto de construcción a tiempo y dentro del presupuesto."</p>
+            <h4>Yair Mendoza</h4>
+        </div>
+        <!-- Testimonio 4 -->
+        <div class="testimonial">
+            <img src="imagenes/cliente4.png" alt="Cliente 4" class="foto-cliente">
+            <p>"Productos de alta calidad y entrega rápida. Siempre compro aquí mis materiales de construcción."</p>
+            <h4>Lennart Fustamante</h4>
+        </div>
+    </div>
+</section>
+
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-social">
+                <h4>Síguenos en:</h4>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-payments">
+                <h4>Métodos de Pago:</h4>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-diners-club"></i>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>Distribuidora Ferretera Ferrocorp - Todos los derechos reservados © 2024</p>
+        </div>
+    </footer>
+
+    <script src="js/reseñas.js"></script>
+    <script src="js/productos.js"></script>
+
+    
+    
+    
+
+    
+</body>
+</html>

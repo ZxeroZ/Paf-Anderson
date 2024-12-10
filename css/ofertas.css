@@ -1,0 +1,96 @@
+/* Contenedor Principal */
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.titulo-ofertas {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de Ofertas */
+
+
+.tarjeta-oferta {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-oferta img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tarjeta-oferta .descuento {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-agregar {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-agregar:hover {
+    background-color: #e68a00;
+}
+
+/* Banner Lateral */
+.banner-lateral {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 220px;
+}
+
+.btn-banner {
+    background-color: #4c5e55;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Banner Promocional Inferior */
+.banner-promocional {
+    background-color: #b19c9c;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.banner-promocional p {
+    margin-top: 10px;
+}
+
+.banner-promocional .btn-banner {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}

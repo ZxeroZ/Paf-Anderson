@@ -1,0 +1,204 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.checkout-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-header .progress-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 10px;
+}
+
+.progress-bar .step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.progress-bar .step i {
+    font-size: 1.5em;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    color: #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+.progress-bar .step p {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #aaa;
+    font-weight: bold;
+}
+
+.progress-bar .step.active i {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.progress-bar .step.active p {
+    color: #000;
+}
+
+.progress-bar .step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px);
+    height: 2px;
+    background: #ccc;
+    width: calc(100% - 20px);
+    z-index: -1;
+}
+
+.progress-bar .step:last-child::after {
+    display: none;
+}
+
+.progress-bar .step.active::after {
+    background: #28a745;
+}
+
+/* Identificación */
+.identificacion-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.identificacion-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.identificacion-container label {
+    display: block;
+    margin-top: 15px;
+    font-size: 1em;
+    color: #555;
+    font-weight: 500;
+}
+
+.identificacion-container input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease-in-out;
+}
+
+.identificacion-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Botón para continuar */
+.confirm-btn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.confirm-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.confirm-btn:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+/* Términos */
+.terms {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms input {
+    transform: scale(1.2);
+    margin-right: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.footer-content i {
+    font-size: 1.5em;
+    color: #333;
+}
+/* Elimina la línea subrayada de los enlaces en la barra de progreso */
+.progress-bar a {
+    text-decoration: none;
+    color: inherit; /* Mantiene el color del texto según el diseño */
+}
+
+.progress-bar a:hover {
+    text-decoration: none; /* Asegura que tampoco aparezca en hover */
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #f00; /* Cambia el color al pasar el mouse */
+}
