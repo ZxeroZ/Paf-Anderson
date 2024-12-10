@@ -170,4 +170,19 @@
         width: 100%;
         padding: 0;
     }
+
+    #cartModal {
+        position: absolute;
+        top: 160px;
+        left: 30px;
+        width: 350px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 10;
+        padding: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
 }
